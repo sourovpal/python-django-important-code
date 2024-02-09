@@ -32,3 +32,14 @@ persons = Person.objects.filter(first_name="Sourov",last_name="Sourov")
         result = person.result_set.first()
         if result:
             print(result.cgpa)
+
+
+
+
+
+for person in persons:
+        if person.id == 1:
+            result = person.result_set.create(cgpa="3.85", semester="1")
+            if result:
+            # print(model_to_dict(person))
+                print(result.get_semester_display())
